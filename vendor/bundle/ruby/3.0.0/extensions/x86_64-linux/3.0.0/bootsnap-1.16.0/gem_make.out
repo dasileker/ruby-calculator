@@ -1,0 +1,15 @@
+current directory: /home/amine/desktop/collab/ruby-calculator/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.16.0/ext/bootsnap
+/home/amine/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/amine/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20230222-6507-aqih5w.rb extconf.rb
+creating Makefile
+
+current directory: /home/amine/desktop/collab/ruby-calculator/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /home/amine/desktop/collab/ruby-calculator/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/amine/desktop/collab/ruby-calculator/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20230222-6507-4yz1ug/bootsnap
