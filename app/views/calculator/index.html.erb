@@ -1,0 +1,12 @@
+<!-- app/views/calculator/calculate.html.erb -->
+<h1>Calculator</h1>
+
+<%= form_tag('/calculator/calculate', method: 'get') do %>
+  <%= label_tag(:expression, 'Enter a mathematical expression:') %>
+  <%= text_field_tag(:expression, nil, placeholder: 'e.g. 2 + 2') %>
+  <%= submit_tag('Calculate') %>
+<% end %>
+
+<% if @result %>
+  <p>Result: <%= @result %></p>
+<% end %>
