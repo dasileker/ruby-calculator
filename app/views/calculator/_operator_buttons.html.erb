@@ -1,0 +1,11 @@
+<% if params[:num1].to_f.between?(0, 100) && params[:num2].to_f.between?(0, 100) %>
+      <%= submit_tag "+", name: 'operator', value: '+', disabled: false %>
+      <%= submit_tag "-", name: 'operator', value: '-', disabled: false %>
+      <%= submit_tag "*", name: 'operator', value: '*', disabled: false %>
+      <%= submit_tag "/", name: 'operator', value: '/', disabled: false %>
+    <% else %>
+      <%= submit_tag "+", name: 'operator', value: '+', disabled: true %>
+      <%= submit_tag "-", name: 'operator', value: '-', disabled: true %>
+      <%= submit_tag "*", name: 'operator', value: '*', disabled: true %>
+      <%= submit_tag "/", name: 'operator', value: '/', disabled: true %>
+<% end %>

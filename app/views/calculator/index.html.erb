@@ -1,12 +1,81 @@
-<!-- app/views/calculator/calculate.html.erb -->
 <h1>Calculator</h1>
 
-<%= form_tag('/calculator/calculate', method: 'get') do %>
-  <%= label_tag(:expression, 'Enter a mathematical expression:') %>
-  <%= text_field_tag(:expression, nil, placeholder: 'e.g. 2 + 2') %>
-  <%= submit_tag('Calculate') %>
+<%= form_tag calculate_path, remote: true, id: "calculator-form" do %>
+
+  <div class="input-row">
+    <%= label_tag :num1, "Number 1 (0-100):" %>
+    <%= text_field_tag :num1, '', min: 0, max: 100, step: 'any', value: '', autocomplete: 'off' %>
+  <div>
+
+  <div class="input-row">
+    <%= label_tag :num2, "Number 2 (0-100):" %>
+    <%= text_field_tag :num2, '', min: 0, max: 100, step: 'any', value: '', autocomplete: 'off' %>
+  <div>
+
+  <div class="form-group">
+    <div id="operator-buttons">
+      <%= render partial: 'operator_buttons' %>
+    </div>
+  </div>
 <% end %>
 
 <% if @result %>
-  <p>Result: <%= @result %></p>
+  <p>Result: <span style="color: <%= @color %>"><%= @result %></span></p>
 <% end %>
+
+<% if flash[:alert] %>
+  <div class="alert-message alert"><%= flash[:alert] %></div>
+<% end %>
+<% if flash[:success] %>
+  <div class="alert-message success"><%= flash[:success] %></div>
+<% end %>
+
+
+<h2>Previous calculations</h2>
+
+<% if @last_calculation %>
+<p class="success-message">New calculation added!</p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number 1</th>
+      <th>Operator</th>
+      <th>Number 2</th>
+      <th>Result</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @calculations.each do |calculation| %>
+        <% if @last_calculation && calculation == @last_calculation %>
+          <tr class="green">
+        <% else %>
+          <tr class="red">
+        <% end %>
+          <td><%= calculation['num1'] %></td>
+          <td><%= calculation['operator'] %></td>
+          <td><%= calculation['num2'] %></td>
+          <td><span class="<%= calculation == @last_calculation ? 'green' : 'red' %>"><%= calculation['result'] %></span></td>
+          <td><span class="red"><%= calculation['count'] %></span></td>
+        </tr>
+    <% end %>
+
+
+
+    <%
+=begin%>
+ <% @calculations.each do |calculation| %>
+    <tr class="<%= calculation == @last_calculation ? @color : (existing_calculation ? 'red' : 'green') %>">
+      <td><%= calculation['num1'] %></td>
+      <td><%= calculation['operator'] %></td>
+      <td><%= calculation['num2'] %></td>
+      <td><span style="color: <%= calculation == @last_calculation ? @color : 'red' %>"><%= calculation['result'] %></span></td>
+      <td><%= calculation['count'] %></td>
+    </tr>
+    <% end %> 
+<%
+=end%>
+  </tbody>
+</table>
