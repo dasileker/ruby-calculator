@@ -1,0 +1,191 @@
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 48px;
+  color: #333;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="number"] {
+  width: calc(50% - 5px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.form-group .operators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.form-group .operators button {
+  width: 80px;
+  height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  background-color: orange !important;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.form-group .operators button:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #eee;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr.red td {
+  color: red;
+  font-weight: bold;
+}
+
+tr.green td {
+  color: green;
+  font-weight: bold;
+}
+
+tr.red td:first-child {
+  background-color: #ffdddd;
+}
+
+tr.green td:first-child {
+  background-color: #ddffdd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-size: 18px;
+}
+
+td:last-child {
+  color: red;
+}
+
+td:nth-last-child(2) {
+  color: green;
+}
+
+.success-message {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+}
+
+.alert {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: orange;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form-group input[type="number"] {
+  margin-right: 10px;
+}
+
+.alert {
+  font-weight: bold;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+  font-size: 16px;
+  animation: fadeOut 2s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
