@@ -22,7 +22,7 @@ Before you can use this application, you need to have the following installed on
 
 If you don't have MongoDB installed on your machine, you can download and install it from the official website:
 
-    MongoDB Community Server
+    MongoDB Community Server: `https://www.mongodb.com/try/download/community-kubernetes-operator`
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ To use the application, follow these steps:
     Enter the second number in the Number 2 field.
     If both numbers are between 0 and 100, the +, -, *, and / buttons will become enabled. If not, they will be disabled.
     Click on the desired operator button to perform the calculation.
-    The result of the calculation will be displayed in green text, along with a success message. The calculation will also be added to the list of previous calculations.
+    The result of the calculation will be displayed, along with a green success message. The calculation will also be added to the list of previous calculations.
     If an error occurs, such as division by zero or an invalid input, an error message will be displayed in red text.
 
 ## Architecture
