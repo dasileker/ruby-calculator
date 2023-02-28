@@ -128,8 +128,8 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/amine/.rvm/rubies/ruby-3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/amine/.rvm/rubies/ruby-3.0.0/include/ruby-3.0.0/ruby/backward -I/home/amine/.rvm/rubies/ruby-3.0.0/include/ruby-3.0.0 -I.    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC conftest.c  -L. -L/home/amine/.rvm/rubies/ruby-3.0.0/lib -Wl,-rpath,/home/amine/.rvm/rubies/ruby-3.0.0/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/amine/.rvm/rubies/ruby-3.0.0/lib -L/home/amine/.rvm/rubies/ruby-3.0.0/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/cc1ddy9P.o: in function `t':
-/home/amine/desktop/collab/ruby-calculator/vendor/bundle/ruby/3.0.0/gems/msgpack-1.6.0/ext/msgpack/conftest.c:17: undefined reference to `rb_hash_new_capa'
+/usr/bin/ld: /tmp/ccLPpIdo.o: in function `t':
+/home/amine/calculator/vendor/bundle/ruby/3.0.0/gems/msgpack-1.6.0/ext/msgpack/conftest.c:17: undefined reference to `rb_hash_new_capa'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */

@@ -1,16 +1,16 @@
-current directory: /home/amine/desktop/collab/ruby-calculator/vendor/bundle/ruby/3.0.0/gems/debug-1.7.1/ext/debug
-/home/amine/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/amine/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20230222-6507-tk4yfo.rb extconf.rb
+current directory: /home/amine/calculator/vendor/bundle/ruby/3.0.0/gems/debug-1.7.1/ext/debug
+/home/amine/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/amine/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20230224-2091-e9khzb.rb extconf.rb
 creating Makefile
 
-current directory: /home/amine/desktop/collab/ruby-calculator/vendor/bundle/ruby/3.0.0/gems/debug-1.7.1/ext/debug
+current directory: /home/amine/calculator/vendor/bundle/ruby/3.0.0/gems/debug-1.7.1/ext/debug
 make DESTDIR\= clean
 
-current directory: /home/amine/desktop/collab/ruby-calculator/vendor/bundle/ruby/3.0.0/gems/debug-1.7.1/ext/debug
+current directory: /home/amine/calculator/vendor/bundle/ruby/3.0.0/gems/debug-1.7.1/ext/debug
 make DESTDIR\=
 compiling debug.c
 compiling iseq_collector.c
 linking shared-object debug/debug.so
 
-current directory: /home/amine/desktop/collab/ruby-calculator/vendor/bundle/ruby/3.0.0/gems/debug-1.7.1/ext/debug
+current directory: /home/amine/calculator/vendor/bundle/ruby/3.0.0/gems/debug-1.7.1/ext/debug
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 debug.so ./.gem.20230222-6507-k3zs9k/debug
+/usr/bin/install -c -m 0755 debug.so ./.gem.20230224-2091-589ovt/debug
