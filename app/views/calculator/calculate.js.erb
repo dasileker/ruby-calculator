@@ -1,0 +1,36 @@
+$("#result").val("<%= escape_javascript(result.to_s) %>");
+$("#operator-buttons").replaceWith("<%= j render partial: 'operator_buttons', locals: { num1: @last_calculation[:num1], num2: @last_calculation[:num2] } %>");
+
+var formData = $('#calculator-form').serialize();
+
+$.ajax({
+  url: '<%= calculate_path %>',
+  type: 'POST',
+  data: formData,
+  success: function(response) {
+    $('#result').text(response.result);
+    $('#count').text(response.count);
+
+    if (response.existing_calculation) {
+      $('#result').addClass('red');
+    } else {
+      $('#result').addClass('green');
+    }
+
+    $('#success-message').text('Calculation Added!');
+    $('#success-message').show();
+    setTimeout(function() {
+      $('#success-message').hide();
+    }, 3000);
+
+    $('#calculator-form').trigger('reset');
+  },
+  error: function(xhr, status, error) {
+    $('#error-message').text('Error: ' + error);
+    $('#error-message').show();
+    setTimeout(function() {
+      $('#error-message').hide();
+    }, 3000);
+  }
+});
+
